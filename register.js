@@ -6,16 +6,17 @@ function register(){
         name:uname,
         email:email.value,
         password:password,
-        balance:0,
-        spent:0
+        income:0,
+        expense:0,
+        incomeArray:[],
+        expenseArray:[]
     }
     if(user.name=="" || user.email=="" || user.password==""){
         alert("Please enter all feilds")
         return
     }
-    if(localStorage.getItem(user.email)){
-        alert("User already exists")
-        return
+    if(email in localStorage){
+        alert("User email Already registered")
     }else{
         localStorage.setItem('user',JSON.stringify(user))
         alert("Successfully added user")
