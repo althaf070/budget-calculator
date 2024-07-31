@@ -21,7 +21,7 @@ function register(){
         localStorage.setItem('user',JSON.stringify(user))
         alert("Successfully added user")
         
-    window.location.href="home.html"
+    window.location.href="index.html"
     }
 
     }
