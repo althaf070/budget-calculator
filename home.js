@@ -127,6 +127,22 @@ function updateChart() {
   }
 }
 
+function clearAll() {
+  alert("Are You sure")
+  user.income = 0;
+  user.expense = 0;
+  user.incomeArray = [];
+  user.expenseArray = [];
+
+  localStorage.setItem('user', JSON.stringify(user));
+
+  updateDisplay();
+  updateTable();
+}
 // Initialize display
 updateDisplay();
 updateTable();
+
+function logout(){
+  window.location.href="index.html"
+}
